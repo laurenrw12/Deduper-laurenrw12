@@ -1,13 +1,14 @@
-Define the problem:
+**Define the problem:**
+
 During PCR, the orginal DNA is duplicated MANY times. But, we want the numbers we analyze to be based on original numbers in the sample, not duplications. So, our goal is to remove all PCR duplicates and retain only a single copy of each read. 
 
-Write examples:
+**Write examples:**
 
 [test_output.sam](test_output.sam)
 
 [test_input.sam](test_input.sam)
 
-Develop your algorithm using pseudocode:
+**Develop your algorithm using pseudocode:**
 ```python
 '''
 set arguments (file, outfile, umi, help)
@@ -64,7 +65,7 @@ open input file (using 'r') & output file (using 'w')
 '''
 ```
 
-Determine high level functions: 
+**Determine high level functions:**
 
 This may sound crazy, but I will not have any functions. 😲
 
