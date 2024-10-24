@@ -53,7 +53,7 @@ open input file (using 'r') & output file (using 'w')
 
     POSITION = column 4 (LINE_AS_LIST[3])
     CIGAR_STRING = column 6 (LINE_AS_LIST[4])
-    if CIGAR_STRING start or ends with nS:
+    if CIGAR_STRING start with nS:
       POSITION += n
     
     set KEY_LIST to list of (UMI, RNAME, STRAND, POS)
