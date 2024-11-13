@@ -5,11 +5,10 @@ import re
 # ./deduper.py -f /home/lwil/bgmp/bioinfo/Bi624/Deduper-laurenrw12/test_input.sam -o /home/lwil/bgmp/bioinfo/Bi624/Deduper-laurenrw12/test_output.sam -u STL96.txt 
 
 def get_args():
-    parser = argparse.ArgumentParser(description="")
+    parser = argparse.ArgumentParser(description="", add_help=True)
     parser.add_argument("-f", "--file", help="designates absolute file path to sorted sam file", required=True, type=str)
     parser.add_argument("-o", "--outfile", help="designates absolute file path to deduplicated sam file", required=True, type=str)
     parser.add_argument("-u", "--umi", help="designates file containing the list of UMIs", required=True, type=str)
-    #MAKE SURE TO ADD HELP BACK IN
     return parser.parse_args() 
 
 args = get_args()
