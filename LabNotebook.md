@@ -12,10 +12,9 @@ Part 3: Write your deduper function!
     ```
 
 **samtools sort:**
-samtools sort C1_SE_uniqAlign.sam -o "sorted_C1_SE_uniqAlign.sam"
+samtools sort C1_SE_uniqAlign.sam -o sorted_C1_SE_uniqAlign.sam
 
-
-REPORT!
+REPORTED NUMBERS!
 
 Original File:
 - number of header lines: 64 
