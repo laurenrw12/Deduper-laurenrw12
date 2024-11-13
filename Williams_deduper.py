@@ -18,7 +18,9 @@ u = args.umi
 #MAKE SURE TO ADD HELP BACK IN
 
 def retrieve_identifiers(line: str) -> tuple:
-    ''' doc string here'''
+    '''Takes a line from a sam file, extracts umi, rname, and position, determines 
+    strand from bitwise flag, converts cigar string into tuples of each value and 
+    operation. Returns 5 values in this order: umi, rname, strand, position, cigar_tuples'''
     # split line into columns
     line_as_list = line.strip().split("\t")
     
@@ -50,13 +52,16 @@ def retrieve_identifiers(line: str) -> tuple:
 #Expected Output: ('TTCGCCTA', 2, 'plus', 130171653, [('71', 'M')])
 
 def fix_minus_position(position: int, cigar_tuples: list) -> int:
-    ''' doc string here'''
+    '''Takes a position and the list of cigar tuples and pulls the value 
+    from the tuples of operation type Match (M), Deletion (D), Skipped (N), 
+    and Soft-Clipped (S) and adds these values to the position. Returns 
+    the adjusted position. '''
     for i in range(len(cigar_tuples)):
             if cigar_tuples[i][1] == "M" or cigar_tuples[i][1]  == "D" or cigar_tuples[i][1] == "N" or (i>0 and cigar_tuples[i][1]  == "S"):
                 position += int(cigar_tuples[i][0])
     return position
-#Input: 
-#Expected 
+#Input: (130171653, [('71', 'M')])
+#Expected: 130171724
 
 # initialize
 known_umis = []
