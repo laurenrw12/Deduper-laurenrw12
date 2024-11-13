@@ -66,6 +66,8 @@ chrom_dict = {}
 current_chrom = "1"
 wrong_umi_counter = 0 
 duplicates_removed_counter = 0 
+header_counter = 0
+unique_counter = 0 
 
 # covert known umis textfile to list
 with open(u, "r") as umis:
@@ -86,6 +88,7 @@ with open(f, "r") as input, open(o, "w") as output:
     
     # write header lines to output file
     if line.startswith("@") == True:
+      header_counter += 1
       output.write(line)
       continue
 
@@ -130,6 +133,9 @@ with open(f, "r") as input, open(o, "w") as output:
 
   for key in unique_dict:
     output.write(unique_dict[key])
+    unique_counter += 1 
 
 print("Number of Wrong UMIs:", wrong_umi_counter)
 print("Number of Duplicates Removed:", duplicates_removed_counter)
+print("Number of Unique Reads:", unique_counter)
+print("Number of Header Lines:", header_counter)

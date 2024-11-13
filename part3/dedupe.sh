@@ -11,4 +11,4 @@
 /usr/bin/time -v /home/lwil/bgmp/bioinfo/Bi624/Deduper-laurenrw12/Williams_deduper.py \
     -f /home/lwil/bgmp/bioinfo/Bi624/Deduper-laurenrw12/sorted_C1_SE_uniqAlign.sam \
     -o /home/lwil/bgmp/bioinfo/Bi624/Deduper-laurenrw12/output_C1_SE_uniqAlign.sam \
-    -u STL96.txt 
+    -u /home/lwil/bgmp/bioinfo/Bi624/Deduper-laurenrw12/STL96.txt 
