@@ -2,8 +2,6 @@
 import argparse
 import re
 
-# ./deduper.py -f /home/lwil/bgmp/bioinfo/Bi624/Deduper-laurenrw12/test_input.sam -o /home/lwil/bgmp/bioinfo/Bi624/Deduper-laurenrw12/test_output.sam -u STL96.txt 
-
 def get_args():
     parser = argparse.ArgumentParser(description="", add_help=True)
     parser.add_argument("-f", "--file", help="designates absolute file path to sorted sam file", required=True, type=str)
